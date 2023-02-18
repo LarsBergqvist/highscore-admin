@@ -27,6 +27,7 @@ export const HighScoreListsView = () => {
           <tr>
             <th>Name</th>
             <th>Unit</th>
+            <th>Low score is best</th>
           </tr>
         </thead>
         <tbody>
@@ -35,6 +36,7 @@ export const HighScoreListsView = () => {
               <tr key={list.id} onClick={() => onListClicked(list)}>
                 <td>{list.name}</td>
                 <td>{list.unit}</td>
+                <td>{list.lowIsBest ? "true" : "false"}</td>
               </tr>
             ))}
         </tbody>
